@@ -1,2 +1,2 @@
-# September-Challenge
-Python Code of Questions in September Long Challenge
+# Codechef
+Python Code of Questions in Long Challenge
