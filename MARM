@@ -1,0 +1,20 @@
+# cook your dish here
+for _ in range(int(input())):
+    n,k=map(int,input().split())
+    l=list(map(int,input().split()))
+    i=0
+    while(i<(k//n)%3):
+        for j in range(0,n//2):
+            a=j%n
+            b=n-a-1
+            l[a]=l[a]^l[b]
+            l[b]=l[a]^l[b]
+        i+=1
+    if n%2!=0 and n//2<k:
+        l[n//2]=0
+    if k%n!=0:
+        for j in range(0,k%n):
+            a=j%n
+            b=n-a-1
+            l[a]=l[a]^l[b]
+    print(" ".join(str(j) for j in l))
