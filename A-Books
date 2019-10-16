@@ -1,0 +1,9 @@
+# cook your dish here
+for _ in range(int(input())):
+    n=int(input())
+    l=list(map(int,input().split()))
+    b=[]
+    for i in range(n):
+        ans=n-i-l[i:n].count(l[i])
+        b.append(ans)
+    print(" " .join(str(a) for a in b))
