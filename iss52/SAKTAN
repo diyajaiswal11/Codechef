@@ -1,0 +1,38 @@
+#include <iostream>
+#include <bits/stdc++.h> 
+using namespace std;
+
+int main() {
+	// your code goes here
+	 ios_base::sync_with_stdio(false); 
+     cin.tie(NULL);   
+     long t;
+     cin>>t;
+     while(t--){
+         long n,m,q,reven=0,rodd=0,ceven=0,codd=0,count=0;
+         cin>>n>>m>>q;
+        long row[100001]={0},col[100001]={0};
+         while(q--){
+              long x,y;
+              cin>>x>>y;
+              row[x-1]=row[x-1]+1;
+              col[y-1]=col[y-1]+1;
+         }
+         for(long i=0;i<n;i++){
+             if(row[i]%2==0)
+             reven++;
+             else
+             rodd++;
+         }
+         for(long j=0;j<m;j++){
+             if(col[j]%2==0)
+             ceven++;
+             else
+             codd++;
+         }
+         count=(reven*codd)+(rodd*ceven);
+         cout<<count<<endl;
+     }
+	
+	return 0;
+}

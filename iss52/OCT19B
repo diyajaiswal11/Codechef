@@ -1,0 +1,42 @@
+#include <iostream>
+#include <bits/stdc++.h> 
+using namespace std;
+
+int main() {
+	// your code goes here
+	 ios_base::sync_with_stdio(false); 
+     cin.tie(NULL);
+     int t;
+     cin>>t;
+     while(t--){
+         int n;
+         cin>>n;
+         int a[1000001],f[1000001]={0};
+         for(int i=0;i<n;i++)
+         {
+             cin>>a[i];
+         }
+         int max=0;
+         for(int i=0;i<n;i++){
+             int x=a[i];
+             if(max<f[x])
+             max=f[x];
+            for (int i=1; i<=sqrt(x); i++)  //sqrt n times of factor function
+            { 
+                if ((x%i)==0) 
+                { 
+                    if ((x/i) == i) 
+                        f[i]++; 
+                    else
+                    {
+                        f[i]++;
+                        f[(x/i)]++;
+                    } 
+                } 
+            } 
+         }
+         printf("%d\n",max);
+     }
+	return 0;
+}
+
