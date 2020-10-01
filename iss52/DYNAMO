@@ -1,0 +1,38 @@
+#include <iostream>
+#include <bits/stdc++.h> 
+using namespace std;
+
+
+int main() {
+	// your code goes here
+	 ios_base::sync_with_stdio(false); 
+     cin.tie(NULL); 
+     long t;
+     cin>>t;
+     while(t--){
+     int n;
+     cin>>n;
+     long long a,b,c,d,e,s,x;
+     cin>>a;
+     x=pow(10,n);
+     s=(2*x)+a;
+     cout<<s<<endl<<flush;
+     cin>>b;
+     c=x-b;
+     cout<<c<<endl<<flush;
+     cin>>d;
+     e=x-d;
+	 cout<<e<<endl<<flush;
+	 
+	 int i;
+	 cin>>i;
+	 if(i==1){
+	    continue; 
+	 }
+	 else{
+	     break;
+	 }
+     }
+	 
+	 return 0;
+}
