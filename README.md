@@ -1,3 +1,3 @@
 # Codechef
-Python Code of Questions in Long Challenge
+Solution of Questions on Codechef.
 Contribuitions are welcomed !
