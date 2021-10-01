@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+	int n,a,b,total;
+	string str;
+	cin>>t;
+	while(t--)
+	{
+	    cin>>n>>a>>b;
+        cin>>str;
+	    total = 0;
+	    for(int i=0;i<n;i++)
+	    {
+	        if(str.at(i)=='0')
+	            total+=a;
+	        
+	        else
+	            total+=b;
+	    }
+	    cout<<total<<endl;
+	}
+	return 0;
+}
